@@ -1,0 +1,308 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+//variables
+$black: #0a0908;
+$gunmetal: #22333b;
+$white: #f2f4f3;
+$tan: #a9927d;
+$brown: #5e503f;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 10px;
+  background-color: $white;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+//mixins
+@mixin p {
+  font-size: 1.1rem;
+  color: $black;
+}
+
+@mixin flexme {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+}
+
+.container {
+  @include flexme;
+  width: 100vw;
+  .header-container {
+    @include flexme;
+    background-image: linear-gradient($brown, $tan);
+    align-items: center;
+    flex-basis: 100%;
+    width: 100%;
+    h1 {
+      font-size: 5rem;
+      border: 1rem double $gunmetal;
+      border-width: 2rem;
+      flex-basis: 100%;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    h2 {
+      font-size: 2rem;
+      flex-basis: 100%;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-basis: 100%;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      line-height: 3rem;
+      margin-top: 2rem;
+      @media (max-width: 500px) {
+        flex-flow: column wrap;
+        line-height: 6rem;
+      }
+      a {
+        text-decoration: none;
+        color: $gunmetal;
+        font-size: 1rem;
+        @media (max-width: 500px) {
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+  }
+  .main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    .intro {
+      @include flexme;
+      margin-top: 1rem;
+      flex-basis: 100%;
+      .intro-text {
+        flex-basis: 50%;
+        line-height: 1.5rem;
+        @media (max-width: 500px) {
+          flex-basis: 100%;
+          margin-bottom: 1rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          @include p;
+        }
+      }
+
+      .face-pic {
+        flex-basis: 50%;
+        text-align: center;
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+    .skills {
+      @include flexme;
+      flex-basis: 100%;
+      margin-top: 1rem;
+      h3 {
+        flex-basis: 100%;
+        font-size: 1.5rem;
+      }
+      ul {
+        flex-basis: 100%;
+        margin: 1rem 0 1rem 0;
+        @include p;
+        li {
+          line-height: 1.5rem;
+        }
+      }
+    }
+    .work {
+      @include flexme;
+      flex-basis: 100%;
+      h3 {
+        flex-basis: 100%;
+        font-size: 1.5rem;
+      }
+      ul {
+        flex-basis: 100%;
+        margin: 1rem 0 1rem 0;
+        @include p;
+        li {
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+  footer {
+    @include flexme;
+    background-image: linear-gradient($tan, $brown);
+    padding: 2rem 4.2rem 6rem 4.2rem;
+    flex-basis: 100%;
+    width: 100vw;
+    @media (max-width: 500px) {
+      flex-flow: row wrap;
+    }
+    h2 {
+      font-size: 2rem;
+      flex-basis: 50%;
+      //   border: 1px solid blue;
+      text-align: center;
+      @media (max-width: 500px) {
+        flex-basis: 100%;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+    }
+    .contacts {
+      width: 50%;
+      @include p;
+      address {
+        p {
+          @media (max-width: 500px) {
+            text-align: initial;
+          }
+        }
+      }
+    }
+  }
+}

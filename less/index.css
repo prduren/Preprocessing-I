@@ -1,0 +1,409 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 10px;
+  background-color: #f2f4f3;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100vw;
+}
+
+.container .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5e503f), to(#a9927d));
+  background-image: linear-gradient(#5e503f, #a9927d);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.container .header-container h1 {
+  font-size: 5rem;
+  border: 1rem double #22333b;
+  border-width: 2rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.container .header-container h2 {
+  font-size: 2rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+.container .header-container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+  .container .header-container nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    line-height: 6rem;
+  }
+}
+
+.container .header-container nav a {
+  text-decoration: none;
+  color: #22333b;
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  .container .header-container nav a {
+    border-bottom: 1px solid #0a0908;
+  }
+}
+
+.container .main {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .main .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-top: 1rem;
+  flex-basis: 100%;
+}
+
+.container .main .intro .intro-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .container .main .intro .intro-text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.container .main .intro .intro-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.container .main .intro .intro-text p {
+  font-size: 1.1rem;
+  color: #0a0908;
+}
+
+.container .main .intro .face-pic {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+}
+
+.container .main .intro .face-pic img {
+  border-radius: 50%;
+}
+
+.container .main .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  flex-basis: 100%;
+  margin-top: 1rem;
+}
+
+.container .main .skills h3 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 1.5rem;
+}
+
+.container .main .skills ul {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 1rem 0 1rem 0;
+  font-size: 1.1rem;
+  color: #0a0908;
+}
+
+.container .main .skills ul li {
+  line-height: 1.5rem;
+}
+
+.container .main .work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  flex-basis: 100%;
+}
+
+.container .main .work h3 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 1.5rem;
+}
+
+.container .main .work ul {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 1rem 0 1rem 0;
+  font-size: 1.1rem;
+  color: #0a0908;
+}
+
+.container .main .work ul li {
+  line-height: 1.5rem;
+}
+
+.container footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a9927d), to(#5e503f));
+  background-image: linear-gradient(#a9927d, #5e503f);
+  padding: 2rem 4.2rem 6rem 4.2rem;
+  flex-basis: 100%;
+  width: 100vw;
+}
+
+@media (max-width: 500px) {
+  .container footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+.container footer h2 {
+  font-size: 2rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .container footer h2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
+.container footer .contacts {
+  width: 50%;
+  font-size: 1.1rem;
+  color: #0a0908;
+}
+
+@media (max-width: 500px) {
+  .container footer .contacts address p {
+    text-align: initial;
+  }
+}
+/*# sourceMappingURL=index.css.map */
