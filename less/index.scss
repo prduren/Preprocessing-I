@@ -281,6 +281,7 @@ body {
     width: 100vw;
     @media (max-width: 500px) {
       flex-flow: row wrap;
+      width: 499px;
     }
     h2 {
       font-size: 2rem;
